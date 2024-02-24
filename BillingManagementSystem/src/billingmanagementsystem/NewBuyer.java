@@ -1,9 +1,14 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package billingmanagementsystem;
+import java.awt.Color;
+import javax.swing.JTextField;
 
 /**
  *
@@ -290,38 +295,83 @@ public class NewBuyer extends javax.swing.JFrame {
 
     private void nameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nameFocusGained
         // TODO add your handling code here:
+        if(name.getText().equals("Enter name"))
+        {
+            name.setText("");
+            name.setForeground(new Color(0,0,0));
+        }
     }//GEN-LAST:event_nameFocusGained
 
     private void nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nameFocusLost
         // TODO add your handling code here:
+        if(name.getText().equals(""))
+        {
+            name.setText("Enter name");
+            name.setForeground(new Color(153,153,153));
+        }
     }//GEN-LAST:event_nameFocusLost
 
     private void contactFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_contactFocusGained
         // TODO add your handling code here:
+        if(contact.getText().equals("Enter Contact number"))
+        {
+            contact.setText("");
+            contact.setForeground(new Color(0,0,0));
+        }
     }//GEN-LAST:event_contactFocusGained
 
     private void contactFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_contactFocusLost
         // TODO add your handling code here:
+         if(contact.getText().equals(""))
+        {
+            contact.setText("Enter Contact number");
+            contact.setForeground(new Color(153,153,153));
+        }
     }//GEN-LAST:event_contactFocusLost
 
     private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
         // TODO add your handling code here:
+         if(email.getText().equals("Enter email address"))
+        {
+            email.setText("");
+            email.setForeground(new Color(0,0,0));
+        }
     }//GEN-LAST:event_emailFocusGained
 
     private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
         // TODO add your handling code here:
+         if(email.getText().equals(""))
+        {
+            email.setText("Enter email address");
+            email.setForeground(new Color(153,153,153));
+        }
     }//GEN-LAST:event_emailFocusLost
 
     private void addressFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressFocusGained
         // TODO add your handling code here:
+          if(address.getText().equals("Enter  address"))
+        {
+            address.setText("");
+            address.setForeground(new Color(0,0,0));
+        }
     }//GEN-LAST:event_addressFocusGained
 
     private void addressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressFocusLost
         // TODO add your handling code here:
+          if(address.getText().equals(""))
+        {
+            address.setText("Enter  address");
+            address.setForeground(new Color(153,153,153));
+        }
     }//GEN-LAST:event_addressFocusLost
 
     private void genderFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_genderFocusGained
         // TODO add your handling code here:
+           if(name.getText().equals("Enter  address"))
+        {
+            name.setText("");
+            name.setForeground(new Color(0,0,0));
+        }
     }//GEN-LAST:event_genderFocusGained
 
     private void genderFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_genderFocusLost
