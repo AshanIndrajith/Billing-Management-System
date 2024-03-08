@@ -1,26 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Project;
+
 import java.sql.*;
 
-/**
- *
- * @author INSIGHT
- */
 public class ConnectionProvider {
-    public static Connection getCon()
-    {
+    public static Connection getCon() {
         try {
-           Class .forName("com.mysql.jdbc.Driver");
-           Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bms","root","123456");
-           return con;
-        } catch (Exception e) {
-            return null;
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bms", "root", "");
+            if (con != null && !con.isClosed()) {
+                System.out.println("Database connection established.");
+            } else {
+                System.out.println("Database connection is null or closed.");
+            }
+            return con;
+        } catch (ClassNotFoundException e) {
+            System.out.println("MySQL JDBC Driver not found.");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Failed to connect to MySQL database.");
+            e.printStackTrace();
         }
+        return null;
     }
-
-    
 }
